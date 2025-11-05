@@ -2,7 +2,12 @@
 	path = frontend
 	url = https://github.com/waltereidi/react-docker
 	branch = main
+	update = rebase
+    fetchRecurseSubmodules = true
+
 [submodule "Framework.CrossCutting"]
 	path = Framework.CrossCutting
 	url = https://github.com/waltereidi/Framework.CrossCutting
     branch = main
+	update = rebase
+    fetchRecurseSubmodules = true
