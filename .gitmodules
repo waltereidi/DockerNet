@@ -1,3 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/waltereidi/react-docker
+[submodule "Framework.CrossCutting"]
+	path = Framework.CrossCutting
+	url = https://github.com/waltereidi/Framework.CrossCutting
