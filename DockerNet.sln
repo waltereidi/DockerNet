@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerNet.Domain", "DockerN
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerNet.Tests", "DockerNet.Tests\DockerNet.Tests.csproj", "{2C260EBC-8256-464C-8917-75784A3F9099}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.CrossCutting", "Framework.CrossCutting\Framework.CrossCutting\Framework.CrossCutting.csproj", "{74DF6273-694A-E87A-F8E1-45733FA5DFCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2C260EBC-8256-464C-8917-75784A3F9099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C260EBC-8256-464C-8917-75784A3F9099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C260EBC-8256-464C-8917-75784A3F9099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DF6273-694A-E87A-F8E1-45733FA5DFCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DF6273-694A-E87A-F8E1-45733FA5DFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DF6273-694A-E87A-F8E1-45733FA5DFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DF6273-694A-E87A-F8E1-45733FA5DFCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
