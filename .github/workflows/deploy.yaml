@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy local
         env:
-          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}   # ✅ vindo das variáveis do GitHub
+          DEPLOY_PATH: ${{ vars.PATH }}   # ✅ vindo das variáveis do GitHub
         run: |
           echo "Iniciando deploy local..."
 
