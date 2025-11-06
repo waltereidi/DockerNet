@@ -1,3 +1,4 @@
+using Framework.CrossCutting.Log;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DockerNet.Api.Controllers
@@ -28,6 +29,12 @@ namespace DockerNet.Api.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+        [HttpGet(Name = "GetTeste")]
+        public int GetTeste()
+        {
+            var dto = new Log();
+            return dto.GetNumber();
         }
     }
 }

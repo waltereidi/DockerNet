@@ -1,0 +1,49 @@
+name: Deploy Local Runner .NET 8
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy:
+    name: Build & Deploy (.NET 8)
+    runs-on: self-hosted
+    environment: production
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restaurar dependências
+        run: dotnet restore
+
+      - name: Compilar solução
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Rodar testes
+        run: dotnet test --no-build --verbosity normal
+
+      - name: Publicar aplicação
+        run: dotnet publish -c Release -o ./publish
+
+      - name: Deploy local
+        env:
+          DEPLOY_PATH: ${{ vars.DEPLOY_PATH }}   # ✅ vindo das variáveis do GitHub
+        run: |
+          echo "Iniciando deploy local..."
+
+          echo "Usando diretório: $DEPLOY_PATH"
+          sudo mkdir -p "$DEPLOY_PATH"
+          sudo cp -r ./publish/* "$DEPLOY_PATH/"
+
+          echo "Reiniciando serviço..."
+          sudo systemctl restart dotnet-app.service
+          echo "✅ Deploy finalizado com sucesso!"
