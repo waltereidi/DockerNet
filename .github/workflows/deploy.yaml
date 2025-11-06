@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Configurar .NET 8
         uses: actions/setup-dotnet@v4
