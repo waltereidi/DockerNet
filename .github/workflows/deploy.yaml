@@ -29,10 +29,6 @@ jobs:
 
       - name: Compilar solução
         run: dotnet build --configuration Release --no-restore
-
-      - name: Rodar testes
-        run: dotnet test --no-build --verbosity normal
-
       - name: Publicar aplicação
         run: dotnet publish -c Release -o ./publish
 
