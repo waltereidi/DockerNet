@@ -30,11 +30,6 @@ namespace DockerNet.Api.Controllers
             })
             .ToArray();
         }
-        [HttpGet(Name = "GetTeste")]
-        public int GetTeste()
-        {
-            var dto = new Log();
-            return dto.GetNumber();
-        }
+
     }
 }
